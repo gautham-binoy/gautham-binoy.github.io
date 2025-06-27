@@ -19,6 +19,7 @@
 
     <!-- Screen Overlay for aesthetic -->
     <div class="screen-overlay"></div>
+    <div class="background-grid"></div>
 
     <!-- Side Navigation -->
     <nav id="side-nav">
@@ -32,7 +33,6 @@
 
     <!-- Main Scrolling Container -->
     <main id="gta-scroller">
-
         <!-- Section 1: Home -->
         <section id="home" class="fullscreen-section">
             <div class="content-container">
@@ -56,7 +56,7 @@
         <section id="about" class="fullscreen-section">
             <div class="content-container two-column">
                 <div class="column">
-                    <h2>Education</h2>
+                    <h2><i class="fas fa-user-graduate"></i> Education</h2>
                     <div class="info-card">
                         <h3>Diploma in Computer Engineering</h3>
                         <p class="institution">Government Polytechnic College Perumbavoor</p>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="column">
-                    <h2>Experience</h2>
+                    <h2><i class="fas fa-briefcase"></i> Experience</h2>
                     <div class="info-card">
                         <h3>Flutter App Development Intern</h3>
                         <p class="institution">ICT Academy</p>
@@ -87,8 +87,8 @@
         <!-- Section 3: Certificates -->
         <section id="certificates" class="fullscreen-section">
             <div class="content-container full-width">
-                <h2>Certificates & Achievements</h2>
-                <p class="section-subtitle">A collection of my certifications and accomplishments.</p>
+                <h2><i class="fas fa-certificate"></i> Certificates & Achievements</h2>
+                <p class="section-subtitle">A collection of my certifications and accomplishments. Click any card to view.</p>
                 <div id="certificates-grid">
                     <!-- Certificates will be injected here by JS -->
                 </div>
@@ -98,7 +98,7 @@
         <!-- Section 4: Contact -->
         <section id="contact" class="fullscreen-section">
             <div class="content-container">
-                <h2>Get In Touch</h2>
+                <h2><i class="fas fa-paper-plane"></i> Get In Touch</h2>
                 <p class="section-subtitle">I'm open to new opportunities and collaborations.</p>
                 <div class="contact-methods">
                     <a href="mailto:gauthambinoy111@gmail.com" class="contact-link">
@@ -113,8 +113,18 @@
                 </a>
             </div>
         </section>
-
     </main>
+
+    <!-- NEW: Certificate Lightbox Viewer -->
+    <div id="lightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Certificate Viewer">
+            <h3 id="lightbox-title"></h3>
+        </div>
+        <button id="lightbox-close" class="lightbox-control close-btn">×</button>
+        <button id="lightbox-prev" class="lightbox-control prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="lightbox-next" class="lightbox-control next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
 
     <!-- Scripts -->
     <script src="scripts/main.js"></script>
