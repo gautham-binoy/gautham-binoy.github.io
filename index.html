@@ -1,141 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Add this to the <head> section of your index.html -->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gautham Binoy - A modern portfolio for a Computer Engineering Student">
+    <title>Gautham Binoy | Portfolio</title>
+    
+    <!-- FAVICON LINKS -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gautham Binoy - Computer Engineering Student Portfolio">
-    <title>Gautham Binoy | Portfolio</title>
-    
-    <!-- Fonts and Icons -->
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
 
-    <!-- Screen Overlay for aesthetic -->
-    <div class="screen-overlay"></div>
-    <div class="background-grid"></div>
+    <!-- Animated Background -->
+    <div class="aurora-background"></div>
 
-    <!-- Side Navigation -->
-    <nav id="side-nav">
-        <ul>
-            <li><a href="#home" class="nav-dot active" data-section="home"></a></li>
-            <li><a href="#about" class="nav-dot" data-section="about"></a></li>
-            <li><a href="#certificates" class="nav-dot" data-section="certificates"></a></li>
-            <li><a href="#contact" class="nav-dot" data-section="contact"></a></li>
-        </ul>
-    </nav>
+    <div class="page-container">
+        <header class="reveal">
+            <h1>Gautham Binoy</h1>
+            <p>Computer Engineering Student & Aspiring Developer</p>
+        </header>
 
-    <!-- Main Scrolling Container -->
-    <main id="gta-scroller">
-        <!-- Section 1: Home -->
-        <section id="home" class="fullscreen-section">
-            <div class="content-container">
+        <main class="bento-grid">
+            <!-- Profile Card -->
+            <div id="profile" class="bento-box reveal" data-tilt>
                 <img src="assets/images/profile.jpg" alt="Gautham Binoy" class="profile-pic">
-                <h1 class="glitch" data-text="GAUTHAM BINOY">GAUTHAM BINOY</h1>
-                <p class="subtitle">Computer Engineering Student</p>
-                <div class="social-links">
-                    <a href="https://github.com/gautham-binoy" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/gautham-binoy" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:gauthambinoy111@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+918289881093" title="Phone"><i class="fas fa-phone"></i></a>
-                </div>
-            </div>
-            <div class="scroll-down-indicator">
-                <i class="fas fa-chevron-down"></i>
-                <span>SCROLL</span>
-            </div>
-        </section>
-
-        <!-- Section 2: About (Education & Experience) -->
-        <section id="about" class="fullscreen-section">
-            <div class="content-container two-column">
-                <div class="column">
-                    <h2><i class="fas fa-user-graduate"></i> Education</h2>
-                    <div class="info-card">
-                        <h3>Diploma in Computer Engineering</h3>
-                        <p class="institution">Government Polytechnic College Perumbavoor</p>
-                        <p class="duration">2022 - 2025 (NBA accredited)</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>Secondary School (SSLC)</h3>
-                        <p class="institution">GHSS Kallil</p>
-                        <p class="duration">Completed in 2022</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <h2><i class="fas fa-briefcase"></i> Experience</h2>
-                    <div class="info-card">
-                        <h3>Flutter App Development Intern</h3>
-                        <p class="institution">ICT Academy</p>
-                        <p class="duration">2023</p>
-                        <ul class="description-list">
-                            <li>Completed internship in mobile application development.</li>
-                            <li>Learned Flutter framework basics and app development concepts.</li>
-                            <li>Gained practical experience in the software development lifecycle.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3: Certificates -->
-        <section id="certificates" class="fullscreen-section">
-            <div class="content-container full-width">
-                <h2><i class="fas fa-certificate"></i> Certificates & Achievements</h2>
-                <p class="section-subtitle">A collection of my certifications and accomplishments. Click any card to view.</p>
-                <div id="certificates-grid">
-                    <!-- Certificates will be injected here by JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 4: Contact -->
-        <section id="contact" class="fullscreen-section">
-            <div class="content-container">
-                <h2><i class="fas fa-paper-plane"></i> Get In Touch</h2>
-                <p class="section-subtitle">I'm open to new opportunities and collaborations.</p>
-                <div class="contact-methods">
-                    <a href="mailto:gauthambinoy111@gmail.com" class="contact-link">
-                        <i class="fas fa-envelope"></i> gauthambinoy111@gmail.com
-                    </a>
-                    <a href="tel:+918289881093" class="contact-link">
-                        <i class="fas fa-phone"></i> +91 8289881093
-                    </a>
-                </div>
-                <a href="resume.pdf" class="btn-resume" download>
-                    <i class="fas fa-download"></i> Download My Resume
+                <h2>About Me</h2>
+                <p>Third-year Diploma student passionate about building elegant and effective solutions with technology. Eager to learn, adapt, and contribute to innovative projects.</p>
+                <a href="resume.pdf" class="btn hover-target" download>
+                    <i class="fas fa-download"></i> Download Resume
                 </a>
             </div>
-        </section>
-    </main>
 
-    <!-- NEW: Certificate Lightbox Viewer -->
+            <!-- Education Card -->
+            <div id="education" class="bento-box reveal" data-tilt>
+                <h2><i class="fas fa-user-graduate"></i> Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Diploma in Comp. Eng.</h3>
+                        <p>Govt. Polytechnic, Perumbavoor</p>
+                        <span>2022 - 2025</span>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>SSLC</h3>
+                        <p>GHSS Kallil</p>
+                        <span>2022</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Card -->
+            <div id="skills" class="bento-box reveal" data-tilt>
+                <h2><i class="fas fa-code"></i> Core Skills</h2>
+                <div class="skills-list">
+                    <span>Flutter</span><span>Java</span><span>Python</span>
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                    <span>PHP</span><span>MySQL</span><span>Arduino</span>
+                    <span>Cybersecurity</span><span>UI/UX</span>
+                </div>
+            </div>
+            
+            <!-- Experience Card -->
+            <div id="experience" class="bento-box reveal" data-tilt>
+                 <h2><i class="fas fa-briefcase"></i> Experience</h2>
+                 <div class="experience-item">
+                     <h3>Flutter App Dev Intern</h3>
+                     <p>ICT Academy</p>
+                     <span>2023</span>
+                 </div>
+            </div>
+
+            <!-- Certificates Card -->
+            <div id="certificates" class="bento-box reveal" data-tilt>
+                <h2><i class="fas fa-certificate"></i> Certificates</h2>
+                <p class="cert-info-text">A collection of my achievements. Click any card to view.</p>
+                <div id="certificates-grid">
+                    <!-- Certificates injected by JS -->
+                </div>
+            </div>
+
+            <!-- Contact Card -->
+            <div id="contact" class="bento-box reveal" data-tilt>
+                <h2>Get In Touch</h2>
+                <div class="social-links">
+                    <a href="https://github.com/gautham-binoy" target="_blank" class="hover-target" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/gautham-binoy" target="_blank" class="hover-target" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:gauthambinoy111@gmail.com" class="hover-target" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+918289881093" class="hover-target" title="Phone"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Certificate Lightbox Viewer -->
     <div id="lightbox" class="lightbox-overlay">
         <div class="lightbox-content">
             <img id="lightbox-img" src="" alt="Certificate Viewer">
             <h3 id="lightbox-title"></h3>
         </div>
-        <button id="lightbox-close" class="lightbox-control close-btn">×</button>
-        <button id="lightbox-prev" class="lightbox-control prev-btn"><i class="fas fa-chevron-left"></i></button>
-        <button id="lightbox-next" class="lightbox-control next-btn"><i class="fas fa-chevron-right"></i></button>
+        <button id="lightbox-close" class="lightbox-control close-btn hover-target">×</button>
+        <button id="lightbox-prev" class="lightbox-control prev-btn hover-target"><i class="fas fa-chevron-left"></i></button>
+        <button id="lightbox-next" class="lightbox-control next-btn hover-target"><i class="fas fa-chevron-right"></i></button>
     </div>
 
-    <!-- Scripts -->
+    <!-- JavaScript Files -->
+    <script src="scripts/vanilla-tilt.min.js"></script>
     <script src="scripts/main.js"></script>
-
 </body>
 </html>
